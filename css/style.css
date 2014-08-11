@@ -1,0 +1,661 @@
+@import url("reset.css");
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:600, 500, 400);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+/***** Global *****/
+body {
+	/***background: url(../images/smooth_wall.png);***/
+     background-image: fabric_1.png;
+     color: #595349;
+     font-family: 'Raleway', sans-serif;
+     text-shadow: -2px 1px 4px rgba(150, 150, 150, 0.57);
+}
+
+* {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+/*** border test ***/
+.testborder {
+     border-color: #423e36;
+     border-style: dashed;
+     border-width: 1px; 
+}
+/*** end border test ***/
+
+/*** clearfix ***/
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group{
+    zoom:1;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     overflow: auto;
+     }
+/*** clearfix ***/
+.wrapper {
+  	width: 960px;
+  	margin: 0 auto;
+    padding: 1em;
+}
+
+.shadow {
+	box-shadow: 0 3px 10px #333;
+}
+
+.shadowbox{
+          -webkit-box-shadow: 0px 21px 26px -4px rgba(51, 57, 51, 0.64);
+          -moz-box-shadow:    0px 21px 26px -4px rgba(51, 57, 51, 0.64);
+          box-shadow:         0px 21px 26px -4px rgba(51, 57, 51, 0.64);
+}
+
+/**** Removing Links Style ****/
+a:link {
+     color: #3a7fc2;
+}
+
+a:visited {
+     color: #3a7fc2;
+}
+
+a:hover{
+
+     color: #2e5495;
+}
+
+a:active {
+     color: #abd3e8;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/**** EndRemoving Links Style ****/
+/**** End Global ****/
+
+/**** Header ****/
+#header{
+     height:2px;
+     background-image: -webkit-linear-gradient(left,
+          #91dfc3 20%, 
+          #fff2b2 20%, 
+          #fff2b2 40%, 
+          #fc8575 40%, 
+          #fc8575 60%,
+          #aee7e5 60%, 
+          #aee7e5 80%, 
+          #7db2e2 80%);
+     background-image: -moz-linear-gradient(left,
+          #d9534f 20%, 
+          #6f5499 20%, 
+          #6f5499 40%, 
+          #e95d4a 40%, 
+          #e95d4a 60%,
+          #f0ad4e 60%, 
+          #f0ad4e 80%, 
+          #5cb85c 80%);
+     background-image: -ms-linear-gradient(left,
+          #d9534f 20%, 
+          #6f5499 20%, 
+          #6f5499 40%, 
+          #428bca 40%, 
+          #428bca 60%,
+          #f0ad4e 60%, 
+          #f0ad4e 80%, 
+          #5cb85c 80%);
+     background-image: linear-gradient(left,
+          #d9534f 20%, 
+          #6f5499 20%, 
+          #6f5499 40%, 
+          #428bca 40%, 
+          #428bca 60%,
+          #f0ad4e 60%, 
+          #f0ad4e 80%, 
+          #5cb85c 80%);
+     background-size: 100% 6px;
+     background-position: 50% 100%;
+     background-repeat: no-repeat;
+}
+
+#headerbg{
+     /***background-color: #363c3d;***/
+     margin-top: 2px;
+     height: 100px;
+     width: 960px;
+}
+
+#backgroundheader{
+     /***background-color: #363c3d;***/
+     width: 100%;
+     
+}
+/*** Logo ***/
+
+
+#logo {
+     width: 100px;
+     height: 55px;
+     margin-top: 10px;
+     background: white;
+     text-align: center;
+     font-size: 2em;
+     font-family: 'Pacifico', cursive;
+     text-shadow: -2px 1px 4px rgba(150, 150, 150, 0.57);
+     z-index: -1;
+}
+
+#logo > h2 {
+     font-size: .5em;
+     text-indent: 2.5em;
+
+}
+
+#boxlink {
+  position: absolute;
+  margin-top: -50px; /* hack to align box to logo */
+  background: red;
+  width: 150px;
+  height: 55px;
+  z-index: 1;
+  opacity: 0;
+  font-size: .5em;
+}
+
+/*** End Logo ***/
+/*** Navigation ***/
+#nav_bar{
+     margin: -40px -20px 0 0;
+     float: right;
+}
+
+ul {
+     list-style: none;
+     margin: 0 auto;
+     padding: 0;
+     text-align: center;
+}
+
+li {
+     display: inline-block;
+     margin: 0 10px;
+}
+
+/** base button style **/
+.btn {
+     position: relative;
+     display: block;
+     width: 150px;
+     margin: 10px auto;
+     padding: 10px;
+     background-color: #fff;
+     border: 1px solid #ccc;
+     color: #000;
+     text-align: center;
+     text-decoration: none;
+     text-transform: uppercase;
+     transform-style: flat;
+     transition: all 250ms ease-out;
+}
+
+.btn:before, .btn:after {
+          content: "";
+          position: absolute;
+          z-index: -2;
+          transition: all 250ms ease-out;
+}
+
+/** End Base Button Style **/
+/** Flatten When Hover **/
+.paper {
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+     border-color: #dedede;
+}
+
+.paper-raise-flatten {
+     border-color: #fff;
+     box-shadow: none;
+}
+
+.paper-raise-flatten:before {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+}
+
+.paper-raise-flatten:hover {
+          border-color: #dedede;
+}
+
+.paper-raise-flatten:hover:before {
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+
+a.changeanchor:link {
+  color: #595349;
+}
+
+a.changeanchor:visited {
+  color: #595349;
+}
+
+a.changeanchor:hover {
+  color: #595349;
+}
+
+a.changeanchor:active {
+  color: #595349;
+}
+
+/** End Flatten When Hover **/
+/*** end navigation ***/
+/*** Secondary Navigation ***/
+
+.navigation {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  margin: 0;
+  top: 85px;
+  bottom: 0;
+  right: -100px;
+  z-index: 2;
+  list-style: none;
+  background: #595349;
+  text-align: center;
+}
+
+.navigation li {
+  margin-top: 11px;
+  text-transform: uppercase;
+  font-size: .7em;
+}
+
+.nav-item a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-item a:link, .nav-item a:visited {
+     color: #fff;
+}
+
+.nav-item a:hover {
+  color: #3a7fc2;
+  transition: color 0.4s;
+}
+
+.nav-item a:active {
+     color: #abd3e8;
+     transition: color 0.4s;
+}
+
+.nav-trigger {
+  
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  
+}
+
+label[for="nav-trigger"] {
+  position:fixed;
+  right: 0;
+  top: 2px;
+  z-index: 2;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;  
+  background: #595349;
+}
+
+label[for="nav-trigger"] > span {
+  position:relative;
+  display: inline-block;
+  background-color: #fff;
+  width: 50px;
+  height: 3px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: all .4s ease;
+}
+
+label[for="nav-trigger"] > span::before, label[for="nav-trigger"] > span::after {
+  content: "";
+  position:absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 50px;
+  height: 3px;
+  left: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: all .4s ease;
+}
+
+label[for="nav-trigger"] > span::before {
+  top: -20px;
+}
+
+label[for="nav-trigger"] > span::after {
+  bottom: -20px;
+}
+
+.nav-trigger + label, .navigation {
+  transition: right .4s;
+}
+
+.nav-trigger:checked + label > span {
+  transition: all .4s ease;
+  width: 45px;
+}
+
+.nav-trigger:checked + label > span::before {
+  transition: all .4s ease;
+  top: -15px;
+  width: 45px;
+}
+
+.nav-trigger:checked + label > span::after {
+  transition: all .4s ease;
+  bottom: -15px;
+  width: 45px;
+}
+
+.nav-trigger:checked ~ .navigation {
+  right: 0;
+}
+
+/*** Secondary Navigation ***/
+/**** End Header ****/
+/**** Introduction ****/
+#intro {
+     width:100%;
+     margin: 130px auto 70px auto;
+     height: 840px;
+}
+
+#whoam{
+     font-size: 5.5em;
+     text-align: center;
+     text-shadow: -2px 1px 4px rgba(150, 150, 150, 0.77);
+     font-family: Droid Serif, serif; 
+}
+
+#i{
+     font-size: 5.5em;
+     text-align: center;
+     text-shadow: -2px 1px 4px rgba(150, 150, 150, 0.77);
+     font-family: Droid Serif, serif;
+}
+
+#wrapping{
+     width: 25%;
+     margin: 0 auto;
+}
+
+#chibi{
+     width: 100%;;
+}
+
+#infome{
+     padding: 20px;
+     font-size: 1.5em;
+     color: #444;
+     line-height: 40px;
+     text-shadow: -2px 1px 4px rgba(150, 150, 150, 0.50);
+     font-family: 'Raleway', sans-serif;
+}
+
+a.elephantintheroom:link {
+          color: #4fa774;
+}
+
+a.elephantintheroom:visited {
+          color: #4fa774;
+}
+
+a.elephantintheroom:hover {
+          color: #5b774c;
+}
+
+a.elephantintheroom:active {
+          color: #aae0bf;
+}
+
+     
+#profilepic {
+     width: 50%;
+     float: left;
+}
+
+.infohead{
+     font-family: Droid Serif, serif;
+     font-size: 2em;
+
+     
+}
+
+.descriptions{
+     max-width: 50%;
+     margin-left: 0px;
+     float: left;
+     font-family: 'Raleway', sans-serif;
+}
+
+
+#interests li {
+     display: block;
+     text-align: left;   
+}
+
+#infowrapper{
+     margin-top: 500px;
+     line-height: 35px;
+     font-size: 1em
+}
+
+#infomeone{
+     font-size: 1em;
+     line-height: 35px;
+     padding: 10px;
+}
+
+.boldstyle {
+     font-weight: bold;
+     font-size: 2em;
+}
+
+/**** End Introduction ***/
+/**** Portfolio ****/
+.gallery {
+     line-height: 0;
+     width: 100%;
+     -webkit-column-count: 3;
+     -webkit-column-gap: 0px;
+     -moz-column-count: 3;
+     -moz-column-gap: 0px;
+     column-count: 3;
+     column-gap: 0px;
+}
+
+.gallery img {
+     width: 100%;
+     height: 100%
+     float: left;
+}
+
+h1.gallerytext {
+     margin: 40px 0;
+     font-size: 24px;
+     text-align: center;
+     text-transform: uppercase;
+}
+
+/**** Pure CSS Lightbox ****/
+/* Styles the thumbnail */
+
+a.lightbox img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  box-shadow: 0 0 8 rgba(0,0,0, .6);
+  margin: 0px;
+}
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0, .9);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+/* Styles the lightbox image, centers it vertically and horizontally, 
+adds the zoom-in transition and makes it responsive using a combination of 
+margin and absolute positioning */
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: auto;
+  height: auto;
+  max-height: 0;
+  max-width: 0;
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  right: 26px;
+  top: 10px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  right: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+/* Uses the :target pseudo-class to perform the animations 
+upon clicking the .lightbox-target anchor */
+.lightbox-target:target { /* Height of the container box relative to browser*/
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.lightbox-target:target img { /* size of the targeted image */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox-target:target a.lightbox-close { /* Location of the close box */
+  top: 0; 
+}
+/**** End Pure CSS Lightbox  ****/
+/**** End Portfolio ****/
