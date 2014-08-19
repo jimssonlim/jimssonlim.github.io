@@ -659,3 +659,19 @@ upon clicking the .lightbox-target anchor */
 }
 /**** End Pure CSS Lightbox  ****/
 /**** End Portfolio ****/
+#contact {
+  position: relative;
+  top: -100px;
+  text-align: center;
+}
+
+#messageme {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="message"] {
+  cursor: pointer;
+}
+
+/**** End Portfolio ****/
